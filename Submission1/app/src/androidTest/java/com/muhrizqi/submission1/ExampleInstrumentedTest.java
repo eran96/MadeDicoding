@@ -1,4 +1,4 @@
-package com.muhrizqi.myunittesting;
+package com.muhrizqi.submission1;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.muhrizqi.myunittesting", appContext.getPackageName());
+        assertEquals("com.muhrizqi.submission1", appContext.getPackageName());
     }
 }

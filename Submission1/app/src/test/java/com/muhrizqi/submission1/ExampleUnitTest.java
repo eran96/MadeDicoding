@@ -1,4 +1,4 @@
-package com.muhrizqi.myunittesting;
+package com.muhrizqi.submission1;
 
 import org.junit.Test;
 
