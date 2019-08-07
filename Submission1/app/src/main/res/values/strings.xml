@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Submission1</string>
+    <string name="sample_rating">6.8</string>
+    <string name="title_sample">Title Sample</string>
+    <string name="date_sample">date sample</string>
+    <string name="sample_overview">Overview Description</string>
+    <string name="sample_item_teks_view_short">Sample Item Teks View short</string>
 </resources>
