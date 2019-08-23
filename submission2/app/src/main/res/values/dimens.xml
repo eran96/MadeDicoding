@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_boottom_margin">60dp</dimen>
+    <dimen name="activty_title_height">350dp</dimen>
+    <dimen name="activity_title_size">32sp</dimen>
+</resources>
