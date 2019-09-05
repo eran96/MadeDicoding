@@ -3,11 +3,17 @@ package com.muhrizqi.submission2;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 
 /**
@@ -15,6 +21,7 @@ import android.view.ViewGroup;
  */
 public class TvShowFragment extends Fragment {
 
+    private ArrayList<TvShow> tvShows = new ArrayList<>();
 
     public TvShowFragment() {
         // Required empty public constructor
@@ -28,4 +35,18 @@ public class TvShowFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_tv_show, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        if (tvShows.isEmpty()){
+            tvShows.addAll(TvShowData.getTvShowListData());
+        }
+        RecyclerView rvFragmentTvshow = view.findViewById(R.id.rv_fragment_tv_show);
+        rvFragmentTvshow.setHasFixedSize(true);
+        rvFragmentTvshow.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
+        TvShowAdapter adapter = new TvShowAdapter(view.getContext());
+        adapter.setTvShows(tvShows);
+        rvFragmentTvshow.setAdapter(adapter);
+
+    }
 }
