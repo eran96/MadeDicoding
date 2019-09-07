@@ -21,7 +21,7 @@ public class MovieData {
         return new ArrayList<>(Arrays.asList(titles));
     }
 
-    private static ArrayList<String> getOverViews(){
+    private static ArrayList<String> getOverView(){
         String[] overviews= {
                 "In a series of escalating encounters, former security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities. Meanwhile, the shadowy presence of Elijah Price emerges as an orchestrator who holds secrets critical to both men.",
                 "Captain Glass of the USS Arkansas discovers that a coup d'état is taking place in Russia, so he and his crew join an elite group working on the ground to prevent a war.",
@@ -39,36 +39,36 @@ public class MovieData {
 
     private static ArrayList<String> getDates(){
         String[] dates = {
-                "January 16, 2019",
-                "Oktober 26, 2018",
-                "Desember 13, 2018",
-                "November 27, 2018",
-                "Januari 17, 2019",
-                "November 20, 2018",
-                "Desember 6, 2018",
-                "Oktober 25, 2018",
-                "Desember 14, 2018",
-                "September 28, 2018"
+                "16/01/2019",
+                "26/10/2018",
+                "13/12/2018",
+                "27/11/2018",
+                "17/1/2019",
+                "20/11//2018",
+                "6/12/2018",
+                "25/10/2018",
+                "14/12/2018",
+                "28/9/2018"
 
         };
         return new ArrayList<>(Arrays.asList(dates));
     }
 
     private static ArrayList<Double> getVoteAverages(){
-        double[] avarages = {
-                6.5,
-                6.3,
-                6.6,
-                6.0,
-                6.6,
-                5.8,
-                8.4,
-                6.0,
-                6.6,
-                6.6
+        double[] averages = {
+                65,
+                63,
+                66,
+                60,
+                66,
+                58,
+                84,
+                60,
+                66,
+                66
         };
         ArrayList<Double> list = new ArrayList<>();
-        for(Double aData : avarages){
+        for(Double aData : averages){
             list.add(aData);
         }
         return list;
@@ -112,11 +112,11 @@ public class MovieData {
             Movie movie = new Movie();
             movie.setId(i);
             movie.setTitle(MovieData.getTitles().get(i));
-            movie.setOverview(MovieData.getOverViews().get(i));
+            movie.setOverview(MovieData.getOverView().get(i));
             movie.setPoster_path(MovieData.getPosterPath().get(i));
-            movie.setRealease_date(MovieData.getDates().get(i));
+            movie.setRelease_date(MovieData.getDates().get(i));
             movie.setBackdrop_path(MovieData.getBackDropPath().get(i));
-            movie.setVote_avarage(MovieData.getVoteAverages().get(i));
+            movie.setVote_average(MovieData.getVoteAverages().get(i));
 
             data.add(movie);
         }
