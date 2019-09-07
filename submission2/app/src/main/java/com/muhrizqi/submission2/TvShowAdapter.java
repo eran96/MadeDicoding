@@ -25,24 +25,25 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.RecycleVie
     }
 
     public TvShowAdapter(Context context){
-
+        this.context = context;
     }
 
     public void setTvShows(ArrayList<TvShow> tvShows){
+        this.tvShows = tvShows;
 
     }
 
     @NonNull
     @Override
-    public TvShowAdapter.RecycleViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_movie, viewGroup, false);
+    public RecycleViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_tv_show, viewGroup, false);
         return new RecycleViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecycleViewHolder recycleViewHolder, final int i) {
         recycleViewHolder.tvTitle.setText(tvShows.get(i).getName());
-        recycleViewHolder.tvOverview.setText(tvShows.get(i).getName());
+        recycleViewHolder.tvOverview.setText(tvShows.get(i).getOverview());
         Glide.with(context).load(tvShows.get(i).getPoster_path())
                 .into(recycleViewHolder.imagePhoto);
         recycleViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +70,7 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.RecycleVie
             super(itemView);
             tvTitle = itemView.findViewById(R.id.txt_tv_show_name);
             tvOverview = itemView.findViewById(R.id.txt_tv_show_desc);
-            imagePhoto = itemView.findViewById(R.id.image_detail_tv_show);
+            imagePhoto = itemView.findViewById(R.id.img_tv_show_photo);
         }
     }
 }

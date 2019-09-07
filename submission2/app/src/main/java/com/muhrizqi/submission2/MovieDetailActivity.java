@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide;
 
 public class MovieDetailActivity extends AppCompatActivity {
 
-    public static String DETAIL_MOVIE_EXTRA ="detail tv show extra";
+    public static String DETAIL_MOVIE_EXTRA ="Detail movie show extra";
 
     private Movie movie;
     private TextView txtTitle;
@@ -40,8 +40,8 @@ public class MovieDetailActivity extends AppCompatActivity {
         setTitle(R.string.title_detail_movie);
         txtTitle.setText(movie.getTitle());
         txtOverview.setText(movie.getOverview());
-        txtVoteAverages.setText(String.valueOf(movie.getVote_avarage()));
-        txtDate.setText(movie.getRealease_date());
+        txtVoteAverages.setText(String.valueOf(movie.getVote_average()));
+        txtDate.setText(movie.getRelease_date());
         Glide.with(getApplicationContext()).load(movie.getPoster_path()).into(imgPoster);
     }
 }

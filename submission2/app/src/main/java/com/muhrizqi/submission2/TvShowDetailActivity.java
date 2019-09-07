@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide;
 
 public class TvShowDetailActivity extends AppCompatActivity {
 
-    public static String DETAIL_TV_SHOW_EXTRA = " detail tv show extra";
+    public static String DETAIL_TV_SHOW_EXTRA = " Detail tv show extra";
 
     private TvShow tvShow;
     private TextView txtTitle;

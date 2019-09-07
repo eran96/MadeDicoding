@@ -71,8 +71,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.RecycleViewH
         public RecycleViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.txt_movie_name);
-            tvOverview = itemView.findViewById(R.id.text_detail_description_movie);
-            imagePhoto = itemView.findViewById(R.id.image_detail_movie);
+            tvOverview = itemView.findViewById(R.id.txt_movie_des);
+            imagePhoto = itemView.findViewById(R.id.img_movie_photo);
         }
     }
 }

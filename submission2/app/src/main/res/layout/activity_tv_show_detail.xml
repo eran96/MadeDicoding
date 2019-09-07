@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TvShowDetailActivity">
@@ -15,18 +15,20 @@
             android:id="@+id/image_detail_tv_show"
             android:layout_width="match_parent"
             android:layout_height="@dimen/activity_image_height"
+            android:adjustViewBounds="true"
             android:contentDescription="@string/poster_content_description"
             android:foregroundGravity="center"
-            android:adjustViewBounds="true"
             android:scaleType="centerInside"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/tv_poster_arrow"
-            />
+            app:srcCompat="@drawable/tv_poster_arrow" />
+
         <TextView
             android:id="@+id/text_detail_rating_tv_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="#4D000000"
@@ -37,17 +39,17 @@
             android:text="@string/percentage__sample"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="@id/image_detail_tv_show"
+            app:layout_constraintBottom_toBottomOf="@+id/image_detail_tv_show"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.059"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/image_detail_tv_show"
-            app:layout_constraintVertical_bias="0.926"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            app:layout_constraintTop_toTopOf="@+id/image_detail_tv_show"
+            app:layout_constraintVertical_bias="0.926" />
 
         <TextView
             android:id="@+id/text_detail_titile_tv_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
@@ -56,46 +58,44 @@
             android:textSize="@dimen/activity_title_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_detail_tv_show"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            app:layout_constraintTop_toBottomOf="@+id/image_detail_tv_show" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:contentDescription="@string/calendar_content_description"
-            app:layout_constraintTop_toBottomOf="@id/text_detail_titile_tv_show"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:contentDescription="@string/calendar_content_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_detail_titile_tv_show" />
 
         <TextView
             android:id="@+id/text_detail_calendar_tv_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="@id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/text_detail_titile_tv_show"
             android:text="@string/date__sample"
             android:textSize="12sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            app:layout_constraintStart_toStartOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_titile_tv_show" />
 
         <TextView
             android:id="@+id/text_detail_description_tv_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:lineSpacingMultiplier="1"
-            android:textColor="@android:color/black"
             android:text="@string/lorem__long_sample"
+            android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_detail_calendar_tv_show"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            app:layout_constraintTop_toBottomOf="@id/text_detail_calendar_tv_show" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

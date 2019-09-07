@@ -100,7 +100,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.change_action_languange_sttings){
-            Intent intent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+            Intent mIntent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+            startActivity(mIntent);
         }
         return super.onOptionsItemSelected(item);
     }
